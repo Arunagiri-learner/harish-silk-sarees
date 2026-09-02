@@ -19,8 +19,7 @@
    below until they're connected in a later step.
 --------------------------------------------------------- */
 
-const API_BASE_URL = 'http://localhost:5000/api';
-
+const API_BASE_URL = 'https://harish-silk-sarees.onrender.com/api';
 
 /* ---------------------------------------------------------
    1. PRODUCT CATALOGUE (still used by index.html's home
