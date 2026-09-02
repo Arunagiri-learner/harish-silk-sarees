@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harish Silk & Sarees | Tradition Meets Elegance</title>
+<meta name="description" content="Harish Silk & Sarees — a premium textile showroom for sarees, fabrics, menswear, women's wear and kids wear.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ TOP UTILITY BAR ============ -->
+<div class="topbar">
+  <p>&#9742; +91 98765 43210 &nbsp;|&nbsp; &#9993; hello@harishsilk.in</p>
+  <p class="topbar-tag">Tradition Meets Elegance</p>
+</div>
+
+<!-- ============ NAVIGATION (identical on every page) ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">H</span>
+      <span class="logo-text">
+        <span class="logo-title">Harish <em>Silk &amp; Sarees</em></span>
+        <span class="logo-tagline">Tradition Meets Elegance</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="cart.html" class="nav-link">Cart</a>
+      <a href="billing.html" class="nav-link">Billing</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-btn" aria-label="View cart">
+        &#128722; <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" style="background-image:url('images/showroom.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="zari-border zari-top"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">The Showroom Experience</p>
+    <h1>Tradition Meets<br>Elegance.</h1>
+    <p class="hero-sub">From Kanchipuram silks to everyday cottons — sarees, menswear, women's
+      wear and kids' collections, curated for every occasion under one roof.</p>
+    <div class="hero-actions">
+      <a href="products.html" class="btn btn-gold">Shop the Collection</a>
+      <a href="about.html" class="btn btn-outline">Our Story</a>
+    </div>
+  </div>
+
+  <a href="#categories" class="scroll-cue" aria-label="Scroll down">&#8595;</a>
+  <div class="zari-border zari-bottom"></div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="section categories" id="categories">
+  <div class="section-head">
+    <p class="eyebrow">Shop By Category</p>
+    <h2>Explore Our Categories</h2>
+    <p class="section-sub">Four departments, one address — every thread chosen with intent.</p>
+  </div>
+
+  <div class="categories-grid">
+    <a href="products.html?category=saree" class="category-tile reveal">
+      <span class="cat-icon">&#129508;</span>
+      <h3>Sarees</h3>
+      <p>Silk, cotton &amp; designer</p>
+    </a>
+    <a href="products.html?category=men" class="category-tile reveal">
+      <span class="cat-icon">&#128100;</span>
+      <h3>Men's Wear</h3>
+      <p>Shirts, kurtas &amp; jeans</p>
+    </a>
+    <a href="products.html?category=women" class="category-tile reveal">
+      <span class="cat-icon">&#128132;</span>
+      <h3>Women's Wear</h3>
+      <p>Kurtis, lehengas &amp; nightwear</p>
+    </a>
+    <a href="products.html?category=kids" class="category-tile reveal">
+      <span class="cat-icon">&#129466;</span>
+      <h3>Kids Wear</h3>
+      <p>Dresses, sets &amp; frocks</p>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FEATURED SAREES ============ -->
+<section class="section" id="featured">
+  <div class="section-head-row">
+    <div>
+      <p class="eyebrow">Handpicked</p>
+      <h2>Featured Sarees</h2>
+    </div>
+    <a href="products.html?category=saree" class="view-all">View All Sarees &rarr;</a>
+  </div>
+  <div class="product-grid grid-3" id="featuredSarees">
+    <!-- Rendered by js/main.js -->
+  </div>
+</section>
+
+<!-- ============ MEN'S COLLECTION ============ -->
+<section class="section" id="mens" style="background:var(--white);">
+  <div class="section-head-row">
+    <div>
+      <p class="eyebrow">For Him</p>
+      <h2>Men's Collection</h2>
+    </div>
+    <a href="products.html?category=men" class="view-all">View All Menswear &rarr;</a>
+  </div>
+  <div class="product-grid grid-3" id="mensCollection">
+    <!-- Rendered by js/main.js -->
+  </div>
+</section>
+
+<!-- ============ WOMEN'S COLLECTION ============ -->
+<section class="section" id="womens">
+  <div class="section-head-row">
+    <div>
+      <p class="eyebrow">For Her</p>
+      <h2>Women's Collection</h2>
+    </div>
+    <a href="products.html?category=women" class="view-all">View All Women's Wear &rarr;</a>
+  </div>
+  <div class="product-grid grid-3" id="womensCollection">
+    <!-- Rendered by js/main.js -->
+  </div>
+</section>
+
+<!-- ============ KIDS COLLECTION ============ -->
+<section class="section" id="kids" style="background:var(--white);">
+  <div class="section-head-row">
+    <div>
+      <p class="eyebrow">For The Little Ones</p>
+      <h2>Kids Collection</h2>
+    </div>
+    <a href="products.html?category=kids" class="view-all">View All Kids Wear &rarr;</a>
+  </div>
+  <div class="product-grid grid-3" id="kidsCollection">
+    <!-- Rendered by js/main.js -->
+  </div>
+</section>
+
+<!-- ============ LATEST OFFERS ============ -->
+<section class="offer-strip reveal">
+  <div class="offer-content">
+    <span class="offer-icon">&#10022;</span>
+    <div>
+      <h3>Festive Weave Sale — Flat 20% off on Silk Sarees</h3>
+      <p>Plus free tailoring on every menswear purchase above &#8377;1,999. Offer valid in-store &amp; online.</p>
+    </div>
+    <a href="products.html" class="btn btn-outline-light">Grab the Offer</a>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="offer-cards">
+    <div class="offer-card reveal">
+      <span class="offer-percent">20%</span>
+      <h4>Silk Sarees</h4>
+      <p>On the full Kanchipuram &amp; designer range</p>
+    </div>
+    <div class="offer-card reveal">
+      <span class="offer-percent">15%</span>
+      <h4>Men's Wear</h4>
+      <p>Shirts, kurtas &amp; jeans this festive season</p>
+    </div>
+    <div class="offer-card reveal">
+      <span class="offer-percent">10%</span>
+      <h4>Kids Collection</h4>
+      <p>On dresses, frocks &amp; ethnic sets</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (identical on every page) ============ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo footer-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">
+          <span class="logo-title">Harish <em>Silk &amp; Sarees</em></span>
+        </span>
+      </a>
+      <p>A family-run textile showroom bringing handpicked silks, fabrics, menswear,
+        women's wear and kids' collections to your wardrobe. Tradition meets elegance, always.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">&#402;</a>
+        <a href="#" aria-label="Instagram">&#9737;</a>
+        <a href="#" aria-label="WhatsApp">&#9990;</a>
+        <a href="#" aria-label="YouTube">&#9654;</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="billing.html">Billing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Store Info</h4>
+      <span class="footer-contact-item">&#128205; No. 24, Textile Market Road, T. Nagar, Chennai &ndash; 600017</span>
+      <span class="footer-contact-item">&#128222; +91 98765 43210</span>
+      <span class="footer-contact-item">&#9993; hello@harishsilk.in</span>
+      <span class="footer-contact-item">&#128337; Mon &ndash; Sun: 9:30 AM &ndash; 9:00 PM</span>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay in the Loop</h4>
+      <p>Get notified about festive sales and new arrivals.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">&#10148;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Harish Silk &amp; Sarees. All rights reserved.</p>
+    <p>Crafted with &#10084; for the love of fine fabric.</p>
+  </div>
+</footer>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billing | Harish Silk & Sarees</title>
+<meta name="description" content="Generate and print your invoice at Harish Silk & Sarees.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <p>&#9742; +91 98765 43210 &nbsp;|&nbsp; &#9993; hello@harishsilk.in</p>
+  <p class="topbar-tag">Tradition Meets Elegance</p>
+</div>
+
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">H</span>
+      <span class="logo-text">
+        <span class="logo-title">Harish <em>Silk &amp; Sarees</em></span>
+        <span class="logo-tagline">Tradition Meets Elegance</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="cart.html" class="nav-link">Cart</a>
+      <a href="billing.html" class="nav-link">Billing</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-btn" aria-label="View cart">
+        &#128722; <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="breadcrumb"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / Billing</p>
+    <h1>Billing Counter</h1>
+  </div>
+</section>
+
+<!-- ============ BILLING / POS ============ -->
+<section class="section billing">
+
+  <div class="section-head-row">
+    <div>
+      <p class="eyebrow">HARISH SILK &amp; SAREES</p>
+      <h2>Generate Invoice</h2>
+    </div>
+    <a href="cart.html" class="btn btn-outline-dark btn-sm">&larr; Back to Cart</a>
+  </div>
+
+  <div class="pos-wrap">
+
+    <!-- LEFT: Invoice + Customer + Product Table -->
+    <div class="pos-left">
+
+      <div class="pos-card">
+        <div class="pos-card-head"><h3>Invoice Details</h3></div>
+        <div class="pos-row">
+          <div class="pos-field">
+            <label for="invoiceNo">Invoice Number</label>
+            <input type="text" id="invoiceNo" readonly>
+          </div>
+          <div class="pos-field">
+            <label for="invoiceDate">Date</label>
+            <input type="text" id="invoiceDate" readonly>
+          </div>
+        </div>
+        <div class="pos-row">
+          <div class="pos-field">
+            <label for="custName">Customer Name</label>
+            <input type="text" id="custName" placeholder="e.g. Priya Raman">
+          </div>
+          <div class="pos-field">
+            <label for="custPhone">Phone Number</label>
+            <input type="tel" id="custPhone" placeholder="e.g. 98765 43210" maxlength="10">
+          </div>
+        </div>
+        <div class="pos-row">
+          <div class="pos-field" style="grid-column: 1 / -1;">
+            <label for="custAddress">Address</label>
+            <textarea id="custAddress" rows="2" placeholder="House / Street / City / Pincode"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="pos-card">
+        <div class="pos-card-head">
+          <h3>Product Table</h3>
+          <span class="result-count">From your cart</span>
+        </div>
+        <div class="table-wrap">
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="invoiceBody">
+              <tr class="empty-row" id="emptyInvoiceRow">
+                <td colspan="4">No items to bill yet. Add products to your cart first.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Summary + Payment + Actions -->
+    <div class="pos-right">
+      <div class="pos-card summary-card">
+        <div class="pos-card-head"><h3>Bill Summary</h3></div>
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="subtotalVal">&#8377;0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>GST (5%)</span>
+          <span id="gstVal">&#8377;0.00</span>
+        </div>
+        <div class="summary-line grand-total">
+          <span>Grand Total</span>
+          <span id="grandTotalVal">&#8377;0.00</span>
+        </div>
+
+        <div class="payment-modes">
+          <label class="pm-label">Payment Method</label>
+          <div class="pm-options" id="paymentModes">
+            <button type="button" class="pm-btn active" data-mode="Cash">&#128181; Cash</button>
+            <button type="button" class="pm-btn" data-mode="Card">&#128179; Card</button>
+            <button type="button" class="pm-btn" data-mode="UPI">&#128241; UPI</button>
+          </div>
+        </div>
+
+        <div class="pos-actions">
+          <button class="btn btn-gold" id="generateBillBtn" type="button">Generate Bill</button>
+          <button class="btn btn-outline-dark" id="printBillBtn" type="button">Print Bill</button>
+          <button class="btn btn-maroon" id="saveBillBtn" type="button">Save Bill</button>
+          <a href="cart.html" class="btn btn-clear">Back to Cart</a>
+        </div>
+        <p class="pos-note" id="posNote"></p>
+
+        <!-- Thank you message, shown after a successful Generate Bill -->
+        <div class="thank-you-box" id="thankYouBox">
+          <div class="ty-icon">&#127881;</div>
+          <h4>Thank You for Shopping With Us!</h4>
+          <p class="ty-message">Your invoice has been generated.</p>
+        </div>
+        <p class="no-print-hint">Save Bill keeps a local record only — no data leaves your browser.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Printable receipt (hidden on screen, shown on print) -->
+  <div id="printReceipt" class="print-receipt">
+    <h2>Harish Silk &amp; Sarees</h2>
+    <p class="print-sub">Tradition Meets Elegance</p>
+    <p class="print-address">No. 24, Textile Market Road, T. Nagar, Chennai &ndash; 600017 &nbsp;|&nbsp; +91 98765 43210</p>
+    <hr>
+    <div class="print-meta">
+      <span id="printInvoiceNo"></span>
+      <span id="printDate"></span>
+    </div>
+    <div class="print-meta">
+      <span id="printCustName"></span>
+      <span id="printCustPhone"></span>
+    </div>
+    <p class="print-address" id="printCustAddress"></p>
+    <hr>
+    <table id="printTable">
+      <thead>
+        <tr><th>Product</th><th>Qty</th><th>Price</th><th>Amount</th></tr>
+      </thead>
+      <tbody id="printTableBody"></tbody>
+    </table>
+    <hr>
+    <div class="print-totals">
+      <div><span>Subtotal</span><span id="printSubtotal"></span></div>
+      <div><span>GST (5%)</span><span id="printGst"></span></div>
+      <div class="print-grand"><span>Grand Total</span><span id="printGrandTotal"></span></div>
+      <div><span>Payment Method</span><span id="printPaymentMode"></span></div>
+    </div>
+    <p class="print-thanks">Thank you for shopping with us! Visit again.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo footer-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">
+          <span class="logo-title">Harish <em>Silk &amp; Sarees</em></span>
+        </span>
+      </a>
+      <p>A family-run textile showroom bringing handpicked silks, fabrics, menswear,
+        women's wear and kids' collections to your wardrobe. Tradition meets elegance, always.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">&#402;</a>
+        <a href="#" aria-label="Instagram">&#9737;</a>
+        <a href="#" aria-label="WhatsApp">&#9990;</a>
+        <a href="#" aria-label="YouTube">&#9654;</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="billing.html">Billing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Store Info</h4>
+      <span class="footer-contact-item">&#128205; No. 24, Textile Market Road, T. Nagar, Chennai &ndash; 600017</span>
+      <span class="footer-contact-item">&#128222; +91 98765 43210</span>
+      <span class="footer-contact-item">&#9993; hello@harishsilk.in</span>
+      <span class="footer-contact-item">&#128337; Mon &ndash; Sun: 9:30 AM &ndash; 9:00 PM</span>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay in the Loop</h4>
+      <p>Get notified about festive sales and new arrivals.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">&#10148;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Harish Silk &amp; Sarees. All rights reserved.</p>
+    <p>Crafted with &#10084; for the love of fine fabric.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/billing.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart | Harish Silk & Sarees</title>
+<meta name="description" content="Review your cart at Harish Silk & Sarees before proceeding to billing.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <p>&#9742; +91 98765 43210 &nbsp;|&nbsp; &#9993; hello@harishsilk.in</p>
+  <p class="topbar-tag">Tradition Meets Elegance</p>
+</div>
+
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">H</span>
+      <span class="logo-text">
+        <span class="logo-title">Harish <em>Silk &amp; Sarees</em></span>
+        <span class="logo-tagline">Tradition Meets Elegance</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="cart.html" class="nav-link">Cart</a>
+      <a href="billing.html" class="nav-link">Billing</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-btn" aria-label="View cart">
+        &#128722; <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Shopping Cart</p>
+    <h1>Your Shopping Cart</h1>
+  </div>
+</section>
+
+<!-- ============ CART ============ -->
+<section class="section">
+
+  <div class="cart-toolbar">
+    <span class="result-count" id="cartItemCount">0 items</span>
+    <a href="products.html" class="btn btn-outline-dark btn-sm">&larr; Continue Shopping</a>
+  </div>
+
+  <div class="cart-layout">
+
+    <!-- LEFT: Cart table -->
+    <div>
+      <div class="cart-table-wrap" id="cartTableWrap">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cartBody">
+            <!-- Rendered by js/cart.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Shown when the cart has no items -->
+      <div class="empty-state" id="emptyCartState" style="display:none; background:var(--white); border-radius:var(--radius-md); box-shadow: var(--shadow-sm);">
+        <div class="empty-icon">&#128722;</div>
+        <h3>Your cart is empty</h3>
+        <p>Looks like you haven't added anything yet. Explore our collections to get started.</p>
+        <a href="products.html" class="btn btn-maroon">Browse Products</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Summary -->
+    <div class="cart-summary-card" id="cartSummaryCard">
+      <h3>Order Summary</h3>
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">&#8377;0.00</span>
+      </div>
+      <div class="summary-line">
+        <span>GST (5%)</span>
+        <span id="cartGst">&#8377;0.00</span>
+      </div>
+      <div class="summary-line grand-total">
+        <span>Grand Total</span>
+        <span id="cartGrandTotal">&#8377;0.00</span>
+      </div>
+
+      <div class="cart-actions">
+        <button class="btn btn-gold btn-block" id="proceedToBillingBtn" type="button">Proceed to Billing</button>
+        <a href="products.html" class="btn btn-outline-dark btn-block">Continue Shopping</a>
+      </div>
+      <p class="promo-note">Prices are inclusive of applicable taxes shown separately at checkout.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo footer-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">
+          <span class="logo-title">Harish <em>Silk &amp; Sarees</em></span>
+        </span>
+      </a>
+      <p>A family-run textile showroom bringing handpicked silks, fabrics, menswear,
+        women's wear and kids' collections to your wardrobe. Tradition meets elegance, always.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">&#402;</a>
+        <a href="#" aria-label="Instagram">&#9737;</a>
+        <a href="#" aria-label="WhatsApp">&#9990;</a>
+        <a href="#" aria-label="YouTube">&#9654;</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="billing.html">Billing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Store Info</h4>
+      <span class="footer-contact-item">&#128205; No. 24, Textile Market Road, T. Nagar, Chennai &ndash; 600017</span>
+      <span class="footer-contact-item">&#128222; +91 98765 43210</span>
+      <span class="footer-contact-item">&#9993; hello@harishsilk.in</span>
+      <span class="footer-contact-item">&#128337; Mon &ndash; Sun: 9:30 AM &ndash; 9:00 PM</span>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay in the Loop</h4>
+      <p>Get notified about festive sales and new arrivals.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">&#10148;</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Harish Silk &amp; Sarees. All rights reserved.</p>
+    <p>Crafted with &#10084; for the love of fine fabric.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
